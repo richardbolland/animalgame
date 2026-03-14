@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   MoveForce: 15
-  JumpForce: 100
+  JumpForce: 1000
   _forcePosition: {fileID: 5936121519648932734}
   _rigidbody: {fileID: 1270131257518208125}
   CamelAnimator: {fileID: 4593684229944186127}
