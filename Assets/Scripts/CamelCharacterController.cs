@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CamelCharacterController : MonoBehaviour
 {
@@ -34,7 +35,15 @@ public class CamelCharacterController : MonoBehaviour
     private float _timeSinceLastMagnet = 0f;
     
     // --- 
-    
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Killbox"))
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
+
     private void Awake()
     {
         _input = new CamelInput();
@@ -51,6 +60,14 @@ public class CamelCharacterController : MonoBehaviour
 
         // Jump - triggered once on press
         bool jumpPressed = _input.Player.Jump.WasPressedThisFrame();
+        
+        
+        bool crouch = _input.Player.Crouch.WasPressedThisFrame();
+
+        if (crouch)
+        {
+            SceneManager.LoadScene(1);
+        }
         
         //Calculate RPM
         //Remove old samples
