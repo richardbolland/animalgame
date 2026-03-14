@@ -131,6 +131,46 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1586580482918629090, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.97849846
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586580482918629090, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.20625438
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287910810658288279, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7786793
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287910810658288279, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287910810658288279, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287910810658288279, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6274222
+      objectReference: {fileID: 0}
+    - target: {fileID: 3138897495784441824, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.398926
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324859776186693829, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.683743
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324859776186693829, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324859776186693829, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7297229
+      objectReference: {fileID: 0}
     - target: {fileID: 3866066460454136777, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.16408
@@ -171,9 +211,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5008233682574797766, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5681914
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008233682574797766, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.8228964
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374978450587923248, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9217587
+      objectReference: {fileID: 0}
     - target: {fileID: 6918417802599447704, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962510129745140874, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.96312046
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962510129745140874, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.2690706
+      objectReference: {fileID: 0}
+    - target: {fileID: 8153742944038231122, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3389894
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516936347454943242, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3200063
       objectReference: {fileID: 0}
     - target: {fileID: 8957124609253589408, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
       propertyPath: m_Name
@@ -290,7 +358,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3.28
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -315,7 +383,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
