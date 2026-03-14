@@ -144,9 +144,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   MoveForce: 10
+  RpmForceMultiplier: 0.1
   JumpForce: 1000
   _forcePosition: {fileID: 5936121519648932734}
   _rigidbody: {fileID: 1270131257518208125}
+  SampleWindowTime: 2
   CamelAnimator: {fileID: 4593684229944186127}
 --- !u!50 &1270131257518208125
 Rigidbody2D:
