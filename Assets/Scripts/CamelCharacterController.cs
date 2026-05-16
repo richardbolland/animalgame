@@ -19,9 +19,14 @@ public class CamelCharacterController : MonoBehaviour
 
     private bool wasRpmMagnetDown = false;
 
+    public SandController SandController;
 
     public Animator CamelAnimator;
-    
+
+    public float FootRaycastDist = 1.5f;
+    public LayerMask FootRaycastLayerMask;
+    public Transform FrontFootRaycastPos;
+    public Transform BackFootRaycastPos;
     
     // RPM
     
@@ -30,6 +35,9 @@ public class CamelCharacterController : MonoBehaviour
     private float _currentRpm = 0f;
     
     private readonly Queue<(float,float)> _rpmSamples = new Queue<(float,float)>();
+
+
+    private float _tractionLoss;
 
     private const float RPM_TIMEOUT = 2f; // seconds before RPM drops to 0
     private float _timeSinceLastMagnet = 0f;
@@ -130,6 +138,13 @@ public class CamelCharacterController : MonoBehaviour
 
     public void FixedUpdate()
     {
+
+        SandController.FrontFootGrounded = Physics2D.Raycast(FrontFootRaycastPos.position, -FrontFootRaycastPos.up, FootRaycastDist, FootRaycastLayerMask);
+        SandController.BackFootGrounded = Physics2D.Raycast(BackFootRaycastPos.position, -BackFootRaycastPos.up, FootRaycastDist, FootRaycastLayerMask);
+        
+        Debug.DrawRay(FrontFootRaycastPos.position, -FrontFootRaycastPos.up * FootRaycastDist, SandController.FrontFootGrounded?Color.green:Color.red);
+        Debug.DrawRay(BackFootRaycastPos.position, -BackFootRaycastPos.up * FootRaycastDist, SandController.BackFootGrounded?Color.green:Color.red);
+        
         // Movement (assuming it's a Vector2 action)
         Vector2 move = _input.Player.Move.ReadValue<Vector2>();
         if (move.x > 0)
@@ -158,6 +173,15 @@ public class CamelCharacterController : MonoBehaviour
        
         Debug.Log("RPM: " + _currentRpm + "Force " + _currentRpm * RpmForceMultiplier * Time.fixedDeltaTime);
 
+
+        float howMuchShouldBeMoving  = _currentRpm * RpmForceMultiplier;
+        float v = _rigidbody.linearVelocity.magnitude;
+        _tractionLoss = Mathf.Max(0, howMuchShouldBeMoving - _rigidbody.linearVelocity.magnitude*SandController.C);
+        
+        Debug.Log($"TractionLoss: {_tractionLoss}, howMuchShouldBeMoving: {howMuchShouldBeMoving}, v: {v}");
+        
+        SandController.Sandyness = _tractionLoss;
+
         if (_currentRpm > 0)
         {
             CamelAnimator.ResetTrigger(idle);
@@ -172,6 +196,13 @@ public class CamelCharacterController : MonoBehaviour
         }
 
         Vector3 force = transform.right * _currentRpm * RpmForceMultiplier * Time.fixedDeltaTime;
+
+        int groundCount = 0;
+        if (SandController.FrontFootGrounded) groundCount++;
+        if (SandController.BackFootGrounded) groundCount++;
+
+        force *= (groundCount / 2f);
+        
         _rigidbody.AddForceAtPosition(force, _forcePosition.position, ForceMode2D.Impulse);
     }
 }
