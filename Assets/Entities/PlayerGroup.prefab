@@ -699,7 +699,7 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: f433a6c5241431447b4d5a63a125d515, type: 2}
     - target: {fileID: 1979015470531724766, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
       propertyPath: FootRaycastDist
-      value: 3
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 1979015470531724766, guid: 44b4625e88e54ab4fa630094117b2ec0, type: 3}
       propertyPath: BackFootRaycastPos
