@@ -82,6 +82,30 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 283510994892377380, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_Anchor.x
+      value: -0.37200746
+      objectReference: {fileID: 0}
+    - target: {fileID: 283510994892377380, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_Anchor.y
+      value: 0.24083471
+      objectReference: {fileID: 0}
+    - target: {fileID: 283510994892377380, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_DampingRatio
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 283510994892377380, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.11543578
+      objectReference: {fileID: 0}
+    - target: {fileID: 283510994892377380, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.00966239
+      objectReference: {fileID: 0}
+    - target: {fileID: 283510994892377380, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 473222531488846887, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -133,6 +157,30 @@ PrefabInstance:
     - target: {fileID: 1274192507440757067, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1442956033329581306, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_Anchor.x
+      value: 0.10286975
+      objectReference: {fileID: 0}
+    - target: {fileID: 1442956033329581306, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_Anchor.y
+      value: 0.7648721
+      objectReference: {fileID: 0}
+    - target: {fileID: 1442956033329581306, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_DampingRatio
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1442956033329581306, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.09616995
+      objectReference: {fileID: 0}
+    - target: {fileID: 1442956033329581306, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.010058165
+      objectReference: {fileID: 0}
+    - target: {fileID: 1442956033329581306, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1641660877045410758, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
       propertyPath: m_Color.b
@@ -228,6 +276,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2903507968658044444, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982628223275469297, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3256825763057981247, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
@@ -461,6 +513,30 @@ PrefabInstance:
     - target: {fileID: 7223619960361575316, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262844761777174376, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_Anchor.x
+      value: -0.27497402
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262844761777174376, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_Anchor.y
+      value: 0.26414824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262844761777174376, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_DampingRatio
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262844761777174376, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.10895401
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262844761777174376, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.009817123
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262844761777174376, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7433679878979107747, guid: fe3f07c2645ef6d40b1d0ddf79e86a1d, type: 3}
       propertyPath: m_Color.b
