@@ -143,8 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc4ec2a07ee08344e8b901260c09d9d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  MoveForce: 10
-  RpmForceMultiplier: 0.075
+  MoveForce: 0
+  RpmForceMultiplier: 50
   JumpForce: 1000
   _forcePosition: {fileID: 5936121519648932734}
   _rigidbody: {fileID: 1270131257518208125}
