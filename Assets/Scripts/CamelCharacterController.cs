@@ -23,11 +23,20 @@ public class CamelCharacterController : MonoBehaviour
 
     public Animator CamelAnimator;
 
+    public float UpsideDownRaycastDist = 1.5f;
     public float FootRaycastDist = 1.5f;
     public LayerMask FootRaycastLayerMask;
     public Transform FrontFootRaycastPos;
     public Transform BackFootRaycastPos;
     
+    
+    public Transform UpsideDownRaycastPos1;
+    public Transform UpsideDownRaycastPos2;
+    public Transform UpsideDownRaycastPos3;
+    public Transform UpsideDownRaycastPos4;
+    public Transform UpsideDownRaycastPos5;
+
+    public float UpsideDownTorqueForce = 100;
     // RPM
     
     private bool _wasRpmMagnetDown = false;
@@ -144,6 +153,78 @@ public class CamelCharacterController : MonoBehaviour
         
         Debug.DrawRay(FrontFootRaycastPos.position, -FrontFootRaycastPos.up * FootRaycastDist, SandController.FrontFootGrounded?Color.green:Color.red);
         Debug.DrawRay(BackFootRaycastPos.position, -BackFootRaycastPos.up * FootRaycastDist, SandController.BackFootGrounded?Color.green:Color.red);
+
+        
+        Debug.DrawRay(BackFootRaycastPos.position, -BackFootRaycastPos.up * UpsideDownRaycastDist, SandController.BackFootGrounded?Color.green:Color.red);
+        Debug.DrawRay(BackFootRaycastPos.position, -BackFootRaycastPos.up * UpsideDownRaycastDist, SandController.BackFootGrounded?Color.green:Color.red);
+
+        int upsideDownRaycastCount = 0;
+
+        if (Physics2D.Raycast(UpsideDownRaycastPos1.position,
+                -UpsideDownRaycastPos1.up,
+                UpsideDownRaycastDist,
+                FootRaycastLayerMask))
+        {
+            upsideDownRaycastCount++;
+            Debug.DrawRay(UpsideDownRaycastPos1.position, -UpsideDownRaycastPos1.up * UpsideDownRaycastDist, Color.red);
+        }
+        else
+        {
+            Debug.DrawRay(UpsideDownRaycastPos1.position, -UpsideDownRaycastPos1.up * UpsideDownRaycastDist, Color.deepSkyBlue);
+        }
+        
+        if (Physics2D.Raycast(UpsideDownRaycastPos2.position,
+                -UpsideDownRaycastPos2.up,
+                UpsideDownRaycastDist,
+                FootRaycastLayerMask))
+        {
+            upsideDownRaycastCount++;
+            Debug.DrawRay(UpsideDownRaycastPos2.position, -UpsideDownRaycastPos2.up * UpsideDownRaycastDist, Color.red);
+        }
+        else
+        {
+            Debug.DrawRay(UpsideDownRaycastPos2.position, -UpsideDownRaycastPos2.up * UpsideDownRaycastDist, Color.deepSkyBlue);
+        }
+        
+        if (Physics2D.Raycast(UpsideDownRaycastPos3.position,
+                -UpsideDownRaycastPos3.up,
+                UpsideDownRaycastDist,
+                FootRaycastLayerMask))
+        {
+            upsideDownRaycastCount++;
+            Debug.DrawRay(UpsideDownRaycastPos3.position, -UpsideDownRaycastPos3.up * UpsideDownRaycastDist, Color.red);
+        }
+        else
+        {
+            Debug.DrawRay(UpsideDownRaycastPos3.position, -UpsideDownRaycastPos3.up * UpsideDownRaycastDist, Color.deepSkyBlue);
+        }
+        
+        if (Physics2D.Raycast(UpsideDownRaycastPos4.position,
+                -UpsideDownRaycastPos4.up,
+                UpsideDownRaycastDist,
+                FootRaycastLayerMask))
+        {
+            upsideDownRaycastCount++;
+            Debug.DrawRay(UpsideDownRaycastPos4.position, -UpsideDownRaycastPos4.up * UpsideDownRaycastDist, Color.red);
+        }
+        else
+        {
+            Debug.DrawRay(UpsideDownRaycastPos4.position, -UpsideDownRaycastPos4.up * UpsideDownRaycastDist, Color.deepSkyBlue);
+        }
+        
+        if (Physics2D.Raycast(UpsideDownRaycastPos5.position,
+                -UpsideDownRaycastPos5.up,
+                UpsideDownRaycastDist,
+                FootRaycastLayerMask))
+        {
+            upsideDownRaycastCount++;
+            Debug.DrawRay(UpsideDownRaycastPos5.position, -UpsideDownRaycastPos5.up * UpsideDownRaycastDist, Color.red);
+        }
+        else
+        {
+            Debug.DrawRay(UpsideDownRaycastPos5.position, -UpsideDownRaycastPos5.up * UpsideDownRaycastDist, Color.deepSkyBlue);
+        }
+        
         
         // Movement (assuming it's a Vector2 action)
         Vector2 move = _input.Player.Move.ReadValue<Vector2>();
@@ -204,5 +285,11 @@ public class CamelCharacterController : MonoBehaviour
         force *= (groundCount / 2f);
         
         _rigidbody.AddForceAtPosition(force, _forcePosition.position, ForceMode2D.Impulse);
+        
+        if (upsideDownRaycastCount >= 1)
+        {
+            Debug.Log("Attempting Recovery!");
+            _rigidbody.AddTorque(Time.fixedDeltaTime * UpsideDownTorqueForce, ForceMode2D.Impulse);
+        }
     }
 }

@@ -40,7 +40,7 @@ public class SandController : MonoBehaviour
         _sandinessActual = Mathf.MoveTowards(_sandinessActual, Sandyness, Time.deltaTime * InterpSpeed);
         float t = Curve.Evaluate(_sandinessActual);
 
-        if (BackFootGrounded)
+        if (FrontFootGrounded)
         {
             foregroundMain.startSpeedMultiplier = t * MaxForegroundSpeed;
             foregroundMain.startSizeMultiplier = t * MaxForegroundScale;
@@ -53,7 +53,7 @@ public class SandController : MonoBehaviour
             foregroundEmission.rateOverTimeMultiplier = 0;
         }
         
-        if (FrontFootGrounded)
+        if (BackFootGrounded)
         {
             backgroundMain.startSpeedMultiplier = t * MaxBackgroundSpeed;
             backgroundMain.startSizeMultiplier = t * MaxBackgroundScale;
