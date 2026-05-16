@@ -6412,10 +6412,20 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 1
+  - name: Head
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: a4be399ca84c21e44925969ab3a5691f
+    layerID: 81
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
   - name: Nostrils
     spriteName: Nostrils
     isGroup: 0
-    parentIndex: 0
+    parentIndex: 1
     spriteID: 22b95facb487927418d67cfd513d542d
     layerID: 80
     mosaicPosition: {x: 284, y: 778}
@@ -6425,7 +6435,7 @@ ScriptedImporter:
   - name: Mouth
     spriteName: Mouth
     isGroup: 0
-    parentIndex: 0
+    parentIndex: 1
     spriteID: d4cf14ecfaecaa54c932ce5fb5ee7158
     layerID: 73
     mosaicPosition: {x: 4, y: 1003}
@@ -6435,7 +6445,7 @@ ScriptedImporter:
   - name: PupilR
     spriteName: PupilR
     isGroup: 0
-    parentIndex: 0
+    parentIndex: 1
     spriteID: 3c39c7e6e9281ec4fb6035d397d4c652
     layerID: 72
     mosaicPosition: {x: 159, y: 826}
@@ -6445,7 +6455,7 @@ ScriptedImporter:
   - name: PupilL
     spriteName: PupilL
     isGroup: 0
-    parentIndex: 0
+    parentIndex: 1
     spriteID: 6f00225dbbb7d5449ab0bd3bb3d60ff5
     layerID: 70
     mosaicPosition: {x: 459, y: 230}
@@ -6455,7 +6465,7 @@ ScriptedImporter:
   - name: EyeR
     spriteName: EyeR
     isGroup: 0
-    parentIndex: 0
+    parentIndex: 1
     spriteID: b2e09e1eacf2adc48b59048cd5038a96
     layerID: 67
     mosaicPosition: {x: 208, y: 719}
@@ -6465,7 +6475,7 @@ ScriptedImporter:
   - name: EyeL
     spriteName: EyeL
     isGroup: 0
-    parentIndex: 0
+    parentIndex: 1
     spriteID: 4c8b60623d714514ab58ed4e08aef791
     layerID: 66
     mosaicPosition: {x: 208, y: 795}
@@ -6475,7 +6485,7 @@ ScriptedImporter:
   - name: Head
     spriteName: Head
     isGroup: 0
-    parentIndex: 0
+    parentIndex: 1
     spriteID: ad20c98aa9b0f1844a3843557bd48db3
     layerID: 65
     mosaicPosition: {x: 4, y: 519}
