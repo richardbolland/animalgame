@@ -41,7 +41,7 @@ public class DuelRigCharacter : MonoBehaviour
     private List<Joint> _physicsJoints;
     private List<Joint> _animatedJoints;
     private List<Joint> _visualJoints;
-
+    
     private List<SpriteRenderer> PhysicsSpriteRenderers
     {
         get

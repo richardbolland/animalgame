@@ -19,9 +19,13 @@ public class CamelCharacterController : MonoBehaviour
 
     private bool wasRpmMagnetDown = false;
 
+    public SandController SandController;
 
     public Animator CamelAnimator;
-    
+
+    public LayerMask FootRaycastLayerMask;
+    public Transform FrontFootRaycastPos;
+    public Transform BackFootRaycastPos;
     
     // RPM
     
@@ -30,6 +34,9 @@ public class CamelCharacterController : MonoBehaviour
     private float _currentRpm = 0f;
     
     private readonly Queue<(float,float)> _rpmSamples = new Queue<(float,float)>();
+
+
+    private float _tractionLoss;
 
     private const float RPM_TIMEOUT = 2f; // seconds before RPM drops to 0
     private float _timeSinceLastMagnet = 0f;
@@ -157,6 +164,15 @@ public class CamelCharacterController : MonoBehaviour
         }
        
         Debug.Log("RPM: " + _currentRpm + "Force " + _currentRpm * RpmForceMultiplier * Time.fixedDeltaTime);
+
+
+        float howMuchShouldBeMoving  = _currentRpm * RpmForceMultiplier;
+        float v = _rigidbody.linearVelocity.magnitude;
+        _tractionLoss = Mathf.Max(0, howMuchShouldBeMoving - _rigidbody.linearVelocity.magnitude*SandController.C);
+        
+        Debug.Log($"TractionLoss: {_tractionLoss}, howMuchShouldBeMoving: {howMuchShouldBeMoving}, v: {v}");
+        
+        SandController.Sandyness = _tractionLoss;
 
         if (_currentRpm > 0)
         {

@@ -1083,7 +1083,7 @@ GameObject:
   - component: {fileID: 409395154}
   - component: {fileID: 409395153}
   - component: {fileID: 409395152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LandBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4372,7 +4372,7 @@ GameObject:
   - component: {fileID: 1210311947}
   - component: {fileID: 1210311946}
   - component: {fileID: 1210311945}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LandBase (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8331,6 +8331,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3673216571630163688, guid: 37d4470ea487fab4f96ee8fc01b12deb, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.33999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 3730083637130340249, guid: 37d4470ea487fab4f96ee8fc01b12deb, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3730083637130340249, guid: 37d4470ea487fab4f96ee8fc01b12deb, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3730083637130340249, guid: 37d4470ea487fab4f96ee8fc01b12deb, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4126823489450683555, guid: 37d4470ea487fab4f96ee8fc01b12deb, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4126823489450683555, guid: 37d4470ea487fab4f96ee8fc01b12deb, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4126823489450683555, guid: 37d4470ea487fab4f96ee8fc01b12deb, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4495723984792776083, guid: 37d4470ea487fab4f96ee8fc01b12deb, type: 3}
       propertyPath: m_SortingOrder
       value: 10
@@ -8374,6 +8402,10 @@ PrefabInstance:
     - target: {fileID: 4934401230745762544, guid: 37d4470ea487fab4f96ee8fc01b12deb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848994921017634388, guid: 37d4470ea487fab4f96ee8fc01b12deb, type: 3}
+      propertyPath: C
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 8242075523778235969, guid: 37d4470ea487fab4f96ee8fc01b12deb, type: 3}
       propertyPath: m_Name
